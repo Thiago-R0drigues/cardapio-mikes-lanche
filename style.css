@@ -1,0 +1,523 @@
+
+:root {
+    --background: #faf6ef;
+    --surface: #ffffff;
+    --dark: #302016;
+    --text: #38251a;
+    --muted: #89796d;
+    --accent: #d99a35;
+    --accent-light: #fff1d9;
+    --border: #eee4d7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--text);
+    background: var(--background);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: auto;
+}
+
+/* HEADER */
+
+.header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+
+.header-content {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-family: "Oswald", sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: .9;
+}
+
+.logo-icon {
+    font-size: 30px;
+}
+
+.logo small {
+    display: block;
+    color: var(--accent);
+    font-size: 10px;
+    letter-spacing: 4px;
+    margin-top: 5px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navigation a {
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+    transition: color .2s;
+}
+
+.navigation a:hover {
+    color: var(--accent);
+}
+
+.header-tag {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: var(--accent);
+}
+
+/* APRESENTAÇÃO */
+
+.intro {
+    padding: 48px 0;
+    background: #f2e8d9;
+}
+
+.intro-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.eyebrow {
+    display: block;
+    color: #b77a20;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.intro-text h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(38px, 4vw, 53px);
+    line-height: 1.12;
+    font-weight: 600;
+}
+
+.intro-text h1 span {
+    color: #bb7c25;
+}
+
+.intro-text p {
+    max-width: 410px;
+    color: #78675a;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 17px;
+}
+
+.intro-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 22px;
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--dark);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 5px;
+}
+
+.intro-link span {
+    color: #b77a20;
+    font-size: 18px;
+}
+
+.intro-image {
+    height: 265px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(48, 32, 22, .13);
+}
+
+.intro-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .5s;
+}
+
+.intro-image:hover img {
+    transform: scale(1.04);
+}
+
+/* ÁREA DO CARDÁPIO */
+
+.menu-area {
+    padding: 65px 0 75px;
+}
+
+.section-intro {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.section-intro .eyebrow {
+    margin-bottom: 5px;
+}
+
+.section-intro h2 {
+    font-family: "Oswald", sans-serif;
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.menu-count {
+    color: var(--muted);
+    font-size: 12px;
+    padding-bottom: 7px;
+}
+
+/* GRID PRINCIPAL */
+
+.menu-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(270px, .85fr);
+    align-items: start;
+    gap: 24px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* CARDS */
+
+.menu-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 25px;
+    box-shadow: 0 5px 18px rgba(48, 32, 22, .035);
+}
+
+.card-heading {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding-bottom: 20px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid var(--border);
+}
+
+.heading-icon {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    background: var(--accent-light);
+    border-radius: 11px;
+    color: #a86e1d;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.card-label {
+    color: #b77a20;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.card-heading h3 {
+    font-family: "Oswald", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+/* LISTA DE LANCHES */
+
+.sandwich-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.sandwich-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.sandwich-item:last-child {
+    border-bottom: 0;
+}
+
+.sandwich-info {
+    min-width: 0;
+}
+
+.sandwich-info h3 {
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.sandwich-info p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+.price {
+    flex-shrink: 0;
+    background: var(--accent-light);
+    color: #98621b;
+    padding: 8px 11px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+/* ADICIONAIS E BEBIDAS */
+
+.simple-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.simple-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.simple-item:last-child {
+    border-bottom: 0;
+}
+
+.simple-item .price {
+    font-size: 11px;
+    padding: 7px 9px;
+}
+
+.menu-observation {
+    margin-top: 20px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.menu-observation span {
+    color: var(--accent);
+    margin-right: 5px;
+}
+
+/* FOOTER */
+
+.footer {
+    background: var(--dark);
+    color: white;
+    padding: 35px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    text-align: center;
+}
+
+.footer-logo {
+    font-family: "Oswald", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.footer-logo span {
+    color: var(--accent);
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.footer-content p {
+    color: #d4c4b6;
+    font-size: 12px;
+}
+
+.footer-content small {
+    color: #a79585;
+    font-size: 11px;
+    margin-top: 7px;
+}
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+
+    .container {
+        width: 93%;
+    }
+
+    .intro-content {
+        gap: 25px;
+    }
+
+    .intro-image {
+        height: 230px;
+    }
+
+    .menu-layout {
+        grid-template-columns: minmax(0, 1.35fr) minmax(240px, .85fr);
+        gap: 15px;
+    }
+
+    .menu-card {
+        padding: 19px;
+    }
+
+    .card-heading {
+        gap: 10px;
+    }
+
+    .heading-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .card-heading h3 {
+        font-size: 21px;
+    }
+
+}
+
+/* CELULARES */
+
+@media (max-width: 680px) {
+
+    .header-content {
+        min-height: 68px;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .header-tag {
+        font-size: 9px;
+    }
+
+    .intro {
+        padding: 35px 0;
+    }
+
+    .intro-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .intro-text h1 {
+        font-size: 40px;
+    }
+
+    .intro-image {
+        height: 210px;
+    }
+
+    .menu-area {
+        padding: 45px 0 55px;
+    }
+
+    .section-intro {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .section-intro h2 {
+        font-size: 30px;
+    }
+
+    .menu-layout {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .sidebar {
+        gap: 17px;
+    }
+
+    .menu-card {
+        padding: 19px;
+    }
+
+}
+
+/* CELULARES PEQUENOS */
+
+@media (max-width: 380px) {
+
+    .container {
+        width: 94%;
+    }
+
+    .intro-text h1 {
+        font-size: 35px;
+    }
+
+    .sandwich-item {
+        gap: 8px;
+    }
+
+    .sandwich-info h3 {
+        font-size: 13px;
+    }
+
+    .sandwich-info p {
+        font-size: 11px;
+    }
+
+    .price {
+        padding: 7px 8px;
+        font-size: 11px;
+    }
+
+}

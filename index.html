@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mike's Lanche | Cardápio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-content">
+
+            <a href="#" class="logo">
+                <span class="logo-icon">🍔</span>
+                <span>
+                    Mike's
+                    <small>LANCHE</small>
+                </span>
+            </a>
+
+            <nav class="navigation">
+                <a href="#cardapio">Cardápio</a>
+                <a href="#adicionais">Adicionais</a>
+                <a href="#bebidas">Bebidas</a>
+            </nav>
+
+            <span class="header-tag">SABOR DE VERDADE</span>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- APRESENTAÇÃO -->
+        <section class="intro">
+            <div class="container intro-content">
+
+                <div class="intro-text">
+                    <span class="eyebrow">BEM-VINDO AO MIKE'S</span>
+
+                    <h1>
+                        Seu lanche favorito,
+                        <span>do seu jeito.</span>
+                    </h1>
+
+                    <p>
+                        Confira nossas opções de lanches,
+                        escolha seus adicionais e aproveite!
+                    </p>
+
+                    <a href="#cardapio" class="intro-link">
+                        Confira as opções <span>↓</span>
+                    </a>
+                </div>
+
+                <div class="intro-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85"
+                        alt="Hambúrguer com queijo, alface e tomate"
+                    >
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CARDÁPIO -->
+        <section class="menu-area" id="cardapio">
+
+            <div class="container">
+
+                <div class="section-intro">
+                    <div>
+                        <span class="eyebrow">ESCOLHA O SEU</span>
+                        <h2>Nosso cardápio</h2>
+                    </div>
+
+                    <span class="menu-count">13 lanches disponíveis</span>
+                </div>
+
+                <div class="menu-layout">
+
+                    <!-- LANCHES -->
+                    <section class="menu-card sandwiches-card">
+
+                        <div class="card-heading">
+                            <div class="heading-icon">🍔</div>
+
+                            <div>
+                                <span class="card-label">FEITOS PARA VOCÊ</span>
+                                <h3>Nossos lanches</h3>
+                            </div>
+                        </div>
+
+                        <div id="sandwich-list" class="sandwich-list"></div>
+
+                    </section>
+
+                    <!-- ADICIONAIS E BEBIDAS -->
+                    <aside class="sidebar">
+
+                        <section class="menu-card" id="adicionais">
+
+                            <div class="card-heading">
+                                <div class="heading-icon">＋</div>
+
+                                <div>
+                                    <span class="card-label">PERSONALIZE</span>
+                                    <h3>Adicionais</h3>
+                                </div>
+                            </div>
+
+                            <div id="extras-list" class="simple-list"></div>
+
+                        </section>
+
+                        <section class="menu-card drinks-card" id="bebidas">
+
+                            <div class="card-heading">
+                                <div class="heading-icon">🥤</div>
+
+                                <div>
+                                    <span class="card-label">PARA ACOMPANHAR</span>
+                                    <h3>Bebidas</h3>
+                                </div>
+                            </div>
+
+                            <div id="drinks-list" class="simple-list"></div>
+
+                        </section>
+
+                    </aside>
+
+                </div>
+
+                <p class="menu-observation">
+                    <span>✳</span>
+                    Consulte a disponibilidade dos produtos.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+
+            <a href="#" class="footer-logo">
+                Mike's <span>LANCHE</span>
+            </a>
+
+            <p>Feito com sabor. Feito para você.</p>
+
+            <small>
+                © <span id="year"></span> Mike's Lanche
+            </small>
+
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
